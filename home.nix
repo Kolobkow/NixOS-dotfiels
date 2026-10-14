@@ -7,6 +7,9 @@
   home.stateVersion = "24.05";
   
   home.packages = with pkgs; [
+    htop
+    swaybg
+    w-clipboard
     git
     fastfetch
   ];

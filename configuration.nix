@@ -63,7 +63,12 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     fastfetch
-    git 
+    git
+    alacritty
+    fuzzel
+    waybar
+    mako
+    xwayland
   ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Some programs need SUID wrappers, can be configured further or are
@@ -108,5 +113,12 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "26.05"; # Did you read the comment?
+  
+
+  programs.niri.enable = true;
+
+
+
+
 
 }
