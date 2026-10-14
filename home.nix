@@ -9,7 +9,7 @@
   home.packages = with pkgs; [
     htop
     swaybg
-    w-clipboard
+    pkgs.w-clipboard
     git
     fastfetch
   ];
