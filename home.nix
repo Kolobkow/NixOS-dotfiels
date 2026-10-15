@@ -17,6 +17,7 @@
     rofi
     fuzzel
     waybar
+    firefox
   ];
   
   programs.home-manager.enable = true;
