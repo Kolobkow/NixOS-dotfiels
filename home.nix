@@ -12,6 +12,11 @@
     wl-clipboard
     git
     fastfetch
+    mako
+    alacritty
+    rofi
+    fuzzel
+    waybar
   ];
   
   programs.home-manager.enable = true;
