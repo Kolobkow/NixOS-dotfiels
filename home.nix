@@ -18,6 +18,7 @@
     fuzzel
     waybar
     firefox
+    thunar
   ];
   
   programs.home-manager.enable = true;
