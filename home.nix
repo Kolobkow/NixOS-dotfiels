@@ -21,6 +21,7 @@
     thunar
     nerd-fonts.jetbrains-mono
     adwaita-icon-theme
+    telegram-desktop
   ];
   
   home.pointerCursor = {
