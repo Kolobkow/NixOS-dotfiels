@@ -19,6 +19,7 @@
     waybar
     firefox
     thunar
+    nerd-fonts.jetbrains-mono
   ];
   
   programs.home-manager.enable = true;
