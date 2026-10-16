@@ -15,7 +15,6 @@
     mako
     alacritty
     rofi
-    fuzzel
     waybar
     firefox
     thunar
