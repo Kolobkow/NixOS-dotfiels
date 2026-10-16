@@ -14,7 +14,7 @@
     fastfetch
     mako
     alacritty
-    rofi
+    rofi-wayland
     fuzzel
     waybar
     firefox
