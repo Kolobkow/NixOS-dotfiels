@@ -63,6 +63,8 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     xwayland
+    bluez
+    bluez-tools
   ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Some programs need SUID wrappers, can be configured further or are
@@ -112,7 +114,8 @@
   programs.zsh.enable = true;
   
 
-
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
 }
 
