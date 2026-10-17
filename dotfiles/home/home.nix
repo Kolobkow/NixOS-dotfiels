@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   imports = [
-    ./modules/desktop-packages.nix
-
+    ./dotfiles/home/modules/desktop-packages.nix
+    ./dotfiles/home/modules/zsh.nix
   ];
   home.username = "kolobok";
   home.homeDirectory = "/home/kolobok";
@@ -15,22 +15,7 @@
     gtk.enable = true;
     x11.enable = true;
   };
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
 
-    # Включаем тему Powerlevel10k
-    initContent = ''
-      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    '';
-  };
-  
-
-
-  programs.bash.enable = true; # пусть bash останется как запасной
   programs.home-manager.enable = true;
 
 }
