@@ -38,10 +38,14 @@
     syntaxHighlighting.enable = true;
 
     # Включаем тему Powerlevel10k
-    initContent = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+    initContent = ''
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+    '';
   };
+  
 
-  # Если вы хотите, чтобы система по умолчанию открывала Zsh в терминале:
+
   programs.bash.enable = true; # пусть bash останется как запасной
   programs.home-manager.enable = true;
 

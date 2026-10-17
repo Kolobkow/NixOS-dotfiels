@@ -24,7 +24,7 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
           
-            home-manager.users.kolobok = ./home.nix;
+            home-manager.users.kolobok = ./dotfiles/home/home.nix;
           } 
         ];      
       }; 
