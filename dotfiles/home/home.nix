@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   imports = [
-    .modules/desktop-packages.nix
-    .modules/zsh.nix
+    ./modules/desktop-packages.nix
+    ./modules/zsh.nix
   ];
   home.username = "kolobok";
   home.homeDirectory = "/home/kolobok";
