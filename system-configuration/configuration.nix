@@ -16,7 +16,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;  
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
+  
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -55,7 +55,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
-
+  users.users.kolobok.shell = pkgs.zsh;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -107,11 +107,10 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "26.05"; # Did you read the comment?
-  
-
+  services.flatpak.enable = true;
   programs.niri.enable = true;
-
-
+  programs.zsh.enable = true;
+  
 
 
 
