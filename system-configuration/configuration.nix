@@ -53,9 +53,9 @@
     isNormalUser = true;
     description = "kolobok";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [];
   };
-  users.users.kolobok.shell = pkgs.zsh;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
