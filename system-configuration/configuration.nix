@@ -112,8 +112,11 @@
   services.flatpak.enable = true;
   programs.niri.enable = true;
   programs.zsh.enable = true;
-  
-
+  services.displayManager.sddm = {
+  enable = true;
+  wayland.enable = true;
+  };  
+  services.displayManager.defaultSession = "niri";
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
