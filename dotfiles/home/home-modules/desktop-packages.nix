@@ -15,5 +15,7 @@
     adwaita-icon-theme
     telegram-desktop
     gnumake
+    vscodium
+    wlogout
   ];
 }
