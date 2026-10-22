@@ -1,20 +1,19 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 { config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
+      ./configuration-modules/system-packages.nix
+      ./configuration-modules/programs.nix
+      ./configuration-modules/service.nix
+      ./configuration-modules/hardware.nix
+      ./configuration-modules/boot.nix
+      ./configuration-modules/user.nix
     ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;  
-  networking.hostName = "nixos"; # Define your hostname.
+ 
+  
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
   # Configure network proxy if necessary
@@ -43,30 +42,10 @@
   };
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."kolobok" = {
-    isNormalUser = true;
-    description = "kolobok";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
-    packages = with pkgs; [];
-  };
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
+  
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs; [
-    xwayland
-    xwayland-satellite
-    bluez
-    bluez-tools
-  ];
+  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -110,28 +89,11 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
     
-  hardware.graphics = {
-  enable = true;
-  enable32Bit = true;
-  };
+  
 
-  programs.xwayland.enable = true;
-  system.stateVersion = "26.05"; # Did you read the comment?
-  services.flatpak.enable = true;
-  programs.niri.enable = true;
-  programs.zsh.enable = true;
-  services.displayManager.sddm = {
-  enable = true;
-  wayland.enable = true;
-  };  
-  services.displayManager.defaultSession = "niri";
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-  programs.steam = {
-  enable = true;
-  remotePlay.openFirewall = true; # Открыть порты для Remote Play (по желанию)
-  dedicatedServer.openFirewall = true; # Открыть порты для выделенных серверов (по желанию)
-  };
+  system.stateVersion = "26.05";
+
+  
 
 
 
