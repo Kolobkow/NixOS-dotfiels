@@ -4,14 +4,14 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./configuration-modules/system-packages.nix
-      ./configuration-modules/program.nix
-      ./configuration-modules/service.nix
-      ./configuration-modules/hardware.nix
-      ./configuration-modules/boot.nix
-      ./configuration-modules/user.nix
-      ./configuration-modules/localization.nix
-      ./configuration-modules/network.nix
+      ./configuration-modules/system-packages/system-packages.nix
+      ./configuration-modules/program/program.nix
+      ./configuration-modules/service/service.nix
+      ./configuration-modules/hardware/hardware.nix
+      ./configuration-modules/boot/boot.nix
+      ./configuration-modules/user/user.nix
+      ./configuration-modules/localization/localization.nix
+      ./configuration-modules/network/network.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
