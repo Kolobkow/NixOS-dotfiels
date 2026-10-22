@@ -11,7 +11,7 @@
       ./configuration-modules/boot.nix
       ./configuration-modules/user.nix
       ./configuration-modules/localization.nix
-      ./configuration-modules/network
+      ./configuration-modules/network.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
