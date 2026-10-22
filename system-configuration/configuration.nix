@@ -63,6 +63,7 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     xwayland
+    xwayland-satellite
     bluez
     bluez-tools
   ];
@@ -108,6 +109,13 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
+    
+  hardware.graphics = {
+  enable = true;
+  enable32Bit = true;
+  };
+
+  programs.xwayland.enable = true;
   system.stateVersion = "26.05"; # Did you read the comment?
   services.flatpak.enable = true;
   programs.niri.enable = true;
@@ -119,6 +127,13 @@
   services.displayManager.defaultSession = "niri";
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+  programs.steam = {
+  enable = true;
+  remotePlay.openFirewall = true; # Открыть порты для Remote Play (по желанию)
+  dedicatedServer.openFirewall = true; # Открыть порты для выделенных серверов (по желанию)
+  };
+
+
 
 }
 
