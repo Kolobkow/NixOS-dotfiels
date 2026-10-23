@@ -17,5 +17,6 @@
     gnumake
     vscodium
     wlogout
+    discord
   ];
 }

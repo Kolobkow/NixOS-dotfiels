@@ -3,6 +3,7 @@
     ./home-modules/desktop-packages.nix
     ./home-modules/zsh.nix
   ];
+
   home.username = "kolobok";
   home.homeDirectory = "/home/kolobok";
   home.stateVersion = "24.05";
