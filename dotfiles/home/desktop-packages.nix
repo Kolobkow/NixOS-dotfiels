@@ -18,5 +18,6 @@
     vscodium
     wlogout
     discord
+    obsidian
   ];
 }
