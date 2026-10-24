@@ -10,7 +10,7 @@
       "-L"
     ];
     dates = "Mon 10:00";
-    randomizedDelaySec = "10min"
+    randomizedDelaySec = "10min";
     allowReboot = false;
   };
 
