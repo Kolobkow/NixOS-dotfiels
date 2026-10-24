@@ -12,6 +12,8 @@
       ./configuration-modules/user.nix
       ./configuration-modules/localization.nix
       ./configuration-modules/network.nix
+      ./configuration-modules/cleaner.nix
+      ./configuration-modules/update.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
