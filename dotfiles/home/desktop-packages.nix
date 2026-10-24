@@ -19,5 +19,6 @@
     wlogout
     discord
     obsidian
+    opencode
   ];
 }
