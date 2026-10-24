@@ -6,9 +6,11 @@
     flags = [
       "--update-input" "nixpkgs"
       "--update-input" "home-manager"
+      "--update-input" "niri"
       "-L"
     ];
-    dates = "Mon 22:00";
+    dates = "Mon 10:00";
+    randomizedDelaySec = "10min"
     allowReboot = false;
   };
 

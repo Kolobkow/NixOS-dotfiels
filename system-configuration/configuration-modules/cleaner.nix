@@ -5,32 +5,20 @@
   
   nix.optimise = {
     automatic = true;
-    dates = [ "weekly" ];
+    dates = [ "Wed 10:00" ];
+    randomizedDelaySec = "10min";
   }; 
 
   
   #auto clean  
   nix.gc = {
     automatic = true;
-    dates = "weekly";
-    randomizedDelaySec = "45min";
+    dates = "Tue 10:00";
+    randomizedDelaySec = "10min";
     options = "--delete-older-than 14d";
   };
 
-
-  boot.loader.systemd-boot.configurationLimit = 10;
-
-  
-  system.autoUpgrade = {
-   enable = true;
-    flake = "/home/kolobok/nixos-config#nixos";
-    flags = [
-      "--update-input" "nixpkgs"
-      "--update-input" "home-manager"
-      "-L"
-    ];
-    dates = "Mon 22:00";
-    allowReboot = false;
-  };
 }
+
+
 
